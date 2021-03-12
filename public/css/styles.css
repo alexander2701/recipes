@@ -80,3 +80,7 @@ hr {
 .title-image{
   width: 10%;
 }
+
+#search-addon{
+  padding: 0;
+}
