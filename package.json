@@ -1,0 +1,25 @@
+{
+  "name": "recepes",
+  "version": "1.0.0",
+  "description": "Application for serving recepes on tha webz",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexander2701/recepes.git"
+  },
+  "author": "Alexander Kramer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexander2701/recepes/issues"
+  },
+  "homepage": "https://github.com/alexander2701/recepes#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.19"
+  }
+}
