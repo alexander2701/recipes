@@ -1,5 +1,6 @@
 body {
   font-family: 'Karla', sans-serif;
+  text-align: center;
 }
 
 hr {
@@ -12,7 +13,6 @@ hr {
 .green-section {
   background-color: #c7ffd8;
   color: #161d6f;
-  text-align: center;
 }
 
 .blue-section {
@@ -20,18 +20,12 @@ hr {
   border-bottom: 2px solid grey;
   border-top: 2px solid grey;
   color: white;
-  padding: 5% 2%;
+  padding: 5%;
   /* overflow: auto; */
-  text-align: center;
-}
-
-.container {
-  margin: 2% auto;
 }
 
 .container-fluid {
-  overflow: hidden;
-  padding: 7% 15%;
+  padding: 5% 7%;
 }
 
 .heading-main {
@@ -55,9 +49,7 @@ hr {
   line-height: 1.5;
 }
 
-.container-fluid {
-  padding: 7% 15%;
-}
+
 
 /* #demo-recepes {
   background-color: #98ded9;
@@ -68,8 +60,12 @@ hr {
 }
 
 #demo-recepes {
-  border: solid grey;
-  border-width: 2px;
+  background-color: #70af85;
+  border: ridge white;
+  border-width: 15px;
+  color: white;
+  /* margin: 5%; */
+  padding: 0;
 }
 
 .carousel-image {
