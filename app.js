@@ -1,12 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
+const mongoose = require('mongoose');
 const favicon = require('serve-favicon')
 const model = require(__dirname + '/model.js')
 const Recepe = model.getRecepeModel()
 
 const app = express();
 const port = 3000;
+
+let searchResult = [];
 
 app.use(favicon(__dirname + '/public/favicon.ico'))
 
@@ -24,4 +27,27 @@ app.use(express.static('public'));
 
 app.get('/', (req, res) => {
   res.render('home');
+});
+
+app.get('/recepten', (req, res) => {
+  console.log(searchResult)
+  res.render('recepten', {
+    searchResult: searchResult
+  });
+});
+
+app.post('/', (req, res) => {
+  let searchValue = req.body.search;
+  Recepe.find((err, recepes) => {
+    if (err) {
+      console.log(err);
+    } else {
+      recepes.forEach(recepe => console.log(recepe));
+      recepes.forEach(recepe => searchResult.push(recepe));
+      console.log(searchResult)
+      // mongoose.connection.close();
+    }
+    res.redirect('/recepten');
+  });
+
 });

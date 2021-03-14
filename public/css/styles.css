@@ -12,6 +12,10 @@ hr {
   width: 8%;
 }
 
+li{
+  font-size: 1.5rem;
+}
+
 /* NAVBAR SECTION */
 
 .navbar-brand {
@@ -83,8 +87,11 @@ hr {
   width: 40%;
 }
 
-
-
 #search-addon {
   padding: 0;
+}
+
+#footer {
+  background-color: #70af85;
+  color: #161d6f;
 }

@@ -1,0 +1,12 @@
+<%- include("partials/header") -%>
+
+<section class="container-fluid">
+  <h1 class="heading-md">lijst met gevonden recepten</h1>
+  <ul class="list-group">
+    <% searchResult.forEach(recepe => { %>
+      <li class="list-group-item"><%= recepe.name %></li>
+    <% }) %>
+  </ul>
+</section>
+
+<%- include("partials/footer") -%>
