@@ -1,6 +1,8 @@
 body {
   font-family: 'Karla', sans-serif;
   text-align: center;
+  background-color: #c7ffd8;
+  color: #161d6f;
 }
 
 hr {
@@ -10,22 +12,32 @@ hr {
   width: 8%;
 }
 
-.green-section {
-  background-color: #c7ffd8;
+/* NAVBAR SECTION */
+
+.navbar-brand {
   color: #161d6f;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
-.blue-section {
-  background-color: #98ded9;
-  border-bottom: 2px solid grey;
-  border-top: 2px solid grey;
-  color: white;
-  padding: 5%;
-  /* overflow: auto; */
+.nav-item {
+  font-weight: bold;
+  padding: 0 20px;
 }
+
+.nav-link {
+  font-size: 1.5rem;
+}
+
+.navbar-custom {
+  background-color: #70af85;
+  background-image: none;
+  background-repeat: no-repeat;
+  padding: 0;
+ }
 
 .container-fluid {
-  padding: 5% 7%;
+  padding: 2% 10%;
 }
 
 .heading-main {
@@ -33,6 +45,10 @@ hr {
   font-family: 'Merriweather', serif;
   font-size: 5rem;
   line-height: 1.5;
+}
+
+.title-image {
+  width: 10%;
 }
 
 .heading-curly {
@@ -49,12 +65,6 @@ hr {
   line-height: 1.5;
 }
 
-
-
-/* #demo-recepes {
-  background-color: #98ded9;
-  height: 600px;
-} */
 #recepe-carousel {
   height: 50%;
 }
@@ -73,10 +83,8 @@ hr {
   width: 40%;
 }
 
-.title-image{
-  width: 10%;
-}
 
-#search-addon{
+
+#search-addon {
   padding: 0;
 }
