@@ -46,6 +46,7 @@ a{
   background-color: #bfdcae;
   background-image: none;
   background-repeat: no-repeat;
+  border-bottom: solid grey 1px;
   padding: 0;
  }
 
@@ -103,5 +104,6 @@ a{
 
 #footer {
   background-color: #bfdcae;
+  border-top: solid grey 1px;
   color: #206a5d;
 }
