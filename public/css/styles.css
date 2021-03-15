@@ -16,6 +16,10 @@ li{
   font-size: 1.5rem;
 }
 
+th,td{
+  color: #161d6f;
+}
+
 /* NAVBAR SECTION */
 
 .navbar-brand {
@@ -66,7 +70,7 @@ li{
   display: block;
   font-family: 'Merriweather', serif;
   font-size: 2rem;
-  line-height: 1.5;  
+  line-height: 1.5;
 }
 
 #recepe-carousel {
