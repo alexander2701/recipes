@@ -1,0 +1,15 @@
+<%- include('partials/header') -%>
+
+<section class='container-fluid'>
+  <% if (typeof searchValue == 'undefined' || searchValue == ""){ %>
+  <% header = "Alle recepten" %>
+  <% }else{ %>
+  <% header = "Recepten met " + searchValue %>
+  <% } %>
+  <h2 class='heading-md'><%= header %></h2>
+
+<%- include('partials/resultsTable') -%>
+
+</section>
+
+<%- include('partials/footer') -%>

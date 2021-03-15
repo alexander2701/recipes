@@ -20,6 +20,10 @@ th,td{
   color: #161d6f;
 }
 
+a{
+  color: #161d6f;
+}
+
 /* NAVBAR SECTION */
 
 .navbar-brand {
@@ -71,6 +75,7 @@ th,td{
   font-family: 'Merriweather', serif;
   font-size: 2rem;
   line-height: 1.5;
+  padding: 10px;
 }
 
 #recepe-carousel {

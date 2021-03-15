@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Naam</th>
+      <th scope="col">Bereidingstijd</th>
+      <th scope="col">Soort recept</th>
+      <th scope="col">Boek</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% searchResult.forEach(recepe => { %>
+    <tr>
+      <td><a href="/recepes/<%= recepe.name %>"><%= recepe.name %></a></td>
+      <td><%= recepe.preparationTime %> minuten</td>
+      <td><%= recepe.type %></td>
+      <td><%= recepe.book %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>

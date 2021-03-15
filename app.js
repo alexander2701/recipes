@@ -28,9 +28,46 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
-// app.get('/recepten', (req, res) => {
-//   res.render('recepten')
-// });
+app.get('/fav', (req, res) => {
+  let searchResult = [];
+  Recepe.find((err, recepes) => {
+    if (err) {
+      console.log(err);
+    } else {
+      recepes.forEach(recepe => searchResult.push(recepe));
+    }
+    res.render('favorites', {
+      searchResult: searchResult
+    });
+  });
+});
+
+app.get('/recepes', (req, res) => {
+  let searchResult = [];
+  Recepe.find((err, recepes) => {
+    if (err) {
+      console.log(err);
+    } else {
+      recepes.forEach(recepe => searchResult.push(recepe));
+    }
+    res.render('recepes', {
+      searchResult: searchResult
+    });
+  });
+});
+
+app.get("/recepes/:item", (req, res) => {
+  Recepe.find((err, recepes) => {
+    if (err) {
+      console.log(err);
+    } else {
+      recepe = recepes[0];
+    }
+    res.render('recepe', {
+      recepe: recepe
+    });
+  });
+});
 
 app.post('/', (req, res) => {
   let searchValue = req.body.search;
@@ -39,12 +76,11 @@ app.post('/', (req, res) => {
     if (err) {
       console.log(err);
     } else {
-        recepes.forEach(recepe => searchResult.push(recepe));
+      recepes.forEach(recepe => searchResult.push(recepe));
     }
-    res.render('recepten', {
+    res.render('recepes', {
       searchValue: searchValue,
       searchResult: searchResult
     });
   });
-
 });
