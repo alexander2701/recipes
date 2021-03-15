@@ -4,11 +4,11 @@ const ejs = require('ejs');
 const mongoose = require('mongoose');
 const favicon = require('serve-favicon')
 const model = require(__dirname + '/model.js')
-const recipe = model.getrecipeModel()
 
 const app = express();
 const port = 3000;
 
+let Recipe = model.getrecipeModel()
 
 app.use(favicon(__dirname + '/public/favicon.ico'))
 
@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 
 app.get('/fav', (req, res) => {
   let searchResult = [];
-  recipe.find((err, recipes) => {
+  Recipe.find((err, recipes) => {
     if (err) {
       console.log(err);
     } else {
@@ -44,7 +44,7 @@ app.get('/fav', (req, res) => {
 
 app.get('/recipes', (req, res) => {
   let searchResult = [];
-  recipe.find((err, recipes) => {
+  Recipe.find((err, recipes) => {
     if (err) {
       console.log(err);
     } else {
@@ -57,7 +57,7 @@ app.get('/recipes', (req, res) => {
 });
 
 app.get("/recipes/:item", (req, res) => {
-  recipe.find((err, recipes) => {
+  Recipe.find((err, recipes) => {
     if (err) {
       console.log(err);
     } else {
@@ -72,7 +72,7 @@ app.get("/recipes/:item", (req, res) => {
 app.post('/', (req, res) => {
   let searchValue = req.body.search;
   let searchResult = [];
-  recipe.find((err, recipes) => {
+  Recipe.find((err, recipes) => {
     if (err) {
       console.log(err);
     } else {
