@@ -1,8 +1,8 @@
 body {
   font-family: 'Karla', sans-serif;
   text-align: center;
-  background-color: #c7ffd8;
-  color: #161d6f;
+  background-color: #f1f1e8;
+  color: #206a5d;
 }
 
 hr {
@@ -17,17 +17,17 @@ li{
 }
 
 th,td{
-  color: #161d6f;
+  color: #206a5d;
 }
 
 a{
-  color: #161d6f;
+  color: #206a5d;
 }
 
 /* NAVBAR SECTION */
 
 .navbar-brand {
-  color: #161d6f;
+  color: #206a5d;
   font-size: 3rem;
   font-weight: bold;
 }
@@ -42,7 +42,7 @@ a{
 }
 
 .navbar-custom {
-  background-color: #70af85;
+  background-color: #bfdcae;
   background-image: none;
   background-repeat: no-repeat;
   padding: 0;
@@ -52,15 +52,15 @@ a{
   padding: 2% 10%;
 }
 
+.title-image {
+  width: 10%;
+}
+
 .heading-main {
-  color: #161d6f;
+  color: #206a5d;
   font-family: 'Merriweather', serif;
   font-size: 5rem;
   line-height: 1.5;
-}
-
-.title-image {
-  width: 10%;
 }
 
 .heading-curly {
@@ -83,10 +83,10 @@ a{
 }
 
 #demo-recipes {
-  background-color: #70af85;
+  background-color: #bfdcae;
   border: ridge white;
   border-width: 15px;
-  color: white;
+  /* color: white; */
   /* margin: 5%; */
   padding: 0;
 }
@@ -101,6 +101,6 @@ a{
 }
 
 #footer {
-  background-color: #70af85;
-  color: #161d6f;
+  background-color: #bfdcae;
+  color: #206a5d;
 }
