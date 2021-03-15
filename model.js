@@ -1,14 +1,14 @@
 
-module.exports.getRecepeModel = function getModel() {
+module.exports.getrecipeModel = function getModel() {
 
   const mongoose = require('mongoose');
 
-  mongoose.connect('mongodb://localhost:27017/recepesDB', {
+  mongoose.connect('mongodb://localhost:27017/recipesDB', {
     useNewUrlParser: true,
     useUnifiedTopology: true
   });
 
-  const recepeSchema = new mongoose.Schema({
+  const recipeSchema = new mongoose.Schema({
     name: {
       type: String,
       required: true
@@ -23,5 +23,5 @@ module.exports.getRecepeModel = function getModel() {
     }
   });
 
-  return mongoose.model('Recepe', recepeSchema);
+  return mongoose.model('Recipe', recipeSchema);
 }

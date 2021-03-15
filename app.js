@@ -4,7 +4,7 @@ const ejs = require('ejs');
 const mongoose = require('mongoose');
 const favicon = require('serve-favicon')
 const model = require(__dirname + '/model.js')
-const Recepe = model.getRecepeModel()
+const recipe = model.getrecipeModel()
 
 const app = express();
 const port = 3000;
@@ -30,11 +30,11 @@ app.get('/', (req, res) => {
 
 app.get('/fav', (req, res) => {
   let searchResult = [];
-  Recepe.find((err, recepes) => {
+  recipe.find((err, recipes) => {
     if (err) {
       console.log(err);
     } else {
-      recepes.forEach(recepe => searchResult.push(recepe));
+      recipes.forEach(recipe => searchResult.push(recipe));
     }
     res.render('favorites', {
       searchResult: searchResult
@@ -42,29 +42,29 @@ app.get('/fav', (req, res) => {
   });
 });
 
-app.get('/recepes', (req, res) => {
+app.get('/recipes', (req, res) => {
   let searchResult = [];
-  Recepe.find((err, recepes) => {
+  recipe.find((err, recipes) => {
     if (err) {
       console.log(err);
     } else {
-      recepes.forEach(recepe => searchResult.push(recepe));
+      recipes.forEach(recipe => searchResult.push(recipe));
     }
-    res.render('recepes', {
+    res.render('recipes', {
       searchResult: searchResult
     });
   });
 });
 
-app.get("/recepes/:item", (req, res) => {
-  Recepe.find((err, recepes) => {
+app.get("/recipes/:item", (req, res) => {
+  recipe.find((err, recipes) => {
     if (err) {
       console.log(err);
     } else {
-      recepe = recepes[0];
+      recipe = recipes[0];
     }
-    res.render('recepe', {
-      recepe: recepe
+    res.render('recipe', {
+      recipe: recipe
     });
   });
 });
@@ -72,13 +72,13 @@ app.get("/recepes/:item", (req, res) => {
 app.post('/', (req, res) => {
   let searchValue = req.body.search;
   let searchResult = [];
-  Recepe.find((err, recepes) => {
+  recipe.find((err, recipes) => {
     if (err) {
       console.log(err);
     } else {
-      recepes.forEach(recepe => searchResult.push(recepe));
+      recipes.forEach(recipe => searchResult.push(recipe));
     }
-    res.render('recepes', {
+    res.render('recipes', {
       searchValue: searchValue,
       searchResult: searchResult
     });

@@ -2,11 +2,11 @@
 
 <section class='container-fluid'>
 
-  <h2 class='heading-md'><%= recepe.name %></h2>
-  <h3 class="heading-sm">Bereidingstijd <%= recepe.preparationTime %> minuten</h3>
+  <h2 class='heading-md'><%= recipe.name %></h2>
+  <h3 class="heading-sm">Bereidingstijd <%= recipe.preparationTime %> minuten</h3>
   <h3 class="heading-sm">Ingredienten</h3>
   <ul>
-    <% recepe.ingredients.forEach(ingredient => { %>
+    <% recipe.ingredients.forEach(ingredient => { %>
       <li><%= ingredient %></li>
   <% }) %>
   </ul>

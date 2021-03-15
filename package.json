@@ -1,21 +1,21 @@
 {
-  "name": "recepes",
+  "name": "recipes",
   "version": "1.0.0",
-  "description": "Application for serving recepes on tha webz",
+  "description": "Application for serving recipes on tha webz",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexander2701/recepes.git"
+    "url": "git+https://github.com/alexander2701/recipes.git"
   },
   "author": "Alexander Kramer",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alexander2701/recepes/issues"
+    "url": "https://github.com/alexander2701/recipes/issues"
   },
-  "homepage": "https://github.com/alexander2701/recepes#readme",
+  "homepage": "https://github.com/alexander2701/recipes#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "ejs": "^3.1.6",

@@ -8,12 +8,12 @@
     </tr>
   </thead>
   <tbody>
-    <% searchResult.forEach(recepe => { %>
+    <% searchResult.forEach(recipe => { %>
     <tr>
-      <td><a href="/recepes/<%= recepe.name %>"><%= recepe.name %></a></td>
-      <td><%= recepe.preparationTime %> minuten</td>
-      <td><%= recepe.type %></td>
-      <td><%= recepe.book %></td>
+      <td><a href="/recipes/<%= recipe.name %>"><%= recipe.name %></a></td>
+      <td><%= recipe.preparationTime %> minuten</td>
+      <td><%= recipe.type %></td>
+      <td><%= recipe.book %></td>
     </tr>
     <% }) %>
   </tbody>
