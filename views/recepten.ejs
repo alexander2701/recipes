@@ -1,7 +1,12 @@
 <%- include("partials/header") -%>
 
 <section class="container-fluid">
-  <h1 class="heading-md">lijst met gevonden recepten</h1>
+  <% if (searchValue == ""){ %>
+  <% header = "Alle recepten" %>
+  <% }else{ %>
+    <% header = "Recepten met " + searchValue %>
+  <% } %>
+  <h1 class="heading-md"><%= header %></h1>
   <ul class="list-group">
     <% searchResult.forEach(recepe => { %>
       <li class="list-group-item"><%= recepe.name %></li>
