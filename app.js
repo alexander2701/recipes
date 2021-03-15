@@ -9,7 +9,6 @@ const Recepe = model.getRecepeModel()
 const app = express();
 const port = 3000;
 
-let searchResult = [];
 
 app.use(favicon(__dirname + '/public/favicon.ico'))
 
@@ -29,25 +28,23 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
-app.get('/recepten', (req, res) => {
-  console.log(searchResult)
-  res.render('recepten', {
-    searchResult: searchResult
-  });
-});
+// app.get('/recepten', (req, res) => {
+//   res.render('recepten')
+// });
 
 app.post('/', (req, res) => {
   let searchValue = req.body.search;
+  let searchResult = [];
   Recepe.find((err, recepes) => {
     if (err) {
       console.log(err);
     } else {
-      recepes.forEach(recepe => console.log(recepe));
-      recepes.forEach(recepe => searchResult.push(recepe));
-      console.log(searchResult)
-      // mongoose.connection.close();
+        recepes.forEach(recepe => searchResult.push(recepe));
     }
-    res.redirect('/recepten');
+    res.render('recepten', {
+      searchValue: searchValue,
+      searchResult: searchResult
+    });
   });
 
 });
