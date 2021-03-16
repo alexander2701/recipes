@@ -65,7 +65,7 @@ a {
 }
 
 .title-image {
-  width: 100px;
+  width: 10vw;
 }
 
 .heading {
@@ -74,13 +74,13 @@ a {
 }
 
 .heading-main {
-  font-size: 5rem;
+  font-size: 5vw;
 }
 
 .heading-curly {
   color: #98ded9;
   font-family: 'Dancing Script', cursive;
-  font-size: 4rem;
+  font-size: 4vw;
 }
 
 .heading-md {
