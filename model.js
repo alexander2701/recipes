@@ -14,9 +14,10 @@ module.exports.getrecipeModel = function getModel() {
       required: true
     },
     type: String,
-    page: Number,
     preparationTime: Number,
     book: String,
+    page: Number,
+    favorite: Boolean,
     ingredients: {
       type: Array,
       "default": []

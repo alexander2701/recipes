@@ -30,7 +30,9 @@ app.get('/', (req, res) => {
 
 app.get('/fav', (req, res) => {
   let searchResult = [];
-  Recipe.find((err, recipes) => {
+  Recipe.find({
+    favorite: true
+  }, (err, recipes) => {
     if (err) {
       console.log(err);
     } else {
@@ -57,7 +59,9 @@ app.get('/recipes', (req, res) => {
 });
 
 app.get("/recipes/:item", (req, res) => {
-  Recipe.find((err, recipes) => {
+  Recipe.find({
+    name: req.params.item
+  }, (err, recipes) => {
     if (err) {
       console.log(err);
     } else {
