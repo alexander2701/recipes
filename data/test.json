@@ -1,8 +1,0 @@
-{
-  "name": "testrecept",
-  "type": "ontbijt",
-  "page": 1,
-  "preparationTime": 15,
-  "book": "geen",
-  "ingredients": ["foo", "bar"]
-}
