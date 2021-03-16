@@ -14,25 +14,27 @@ hr {
 
 ul{
   list-style-type: none;
-  padding: 0;
+  padding: 10px;
   margin: 0;
 }
 
 li {
-  font-size: 1.5rem;
+  font-size: 1.5vw;
 }
 
 th, td {
   color: #206a5d;
+  font-size: 1.5vw;
 }
 
 a {
   color: #206a5d;
 }
 
-input{
+.search-bar, .search-btn{
   box-shadow: -1px 1px 2px #888;
 }
+
 
 /* NAVBAR SECTION */
 .navbar-brand {
@@ -52,8 +54,8 @@ input{
 
 .navbar-custom {
   background-color: #5e9e82;
-  background-image: none;
-  background-repeat: no-repeat;
+  /* background-image: none; */
+  /* background-repeat: no-repeat; */
   border-bottom: solid grey 1px;
   padding: 0;
 }
@@ -82,21 +84,25 @@ input{
 }
 
 .heading-md {
-  /* display: block; */
-  /* font-size: 2rem; */
+  font-size: 3vw;
   padding: 10px;
 }
 
-@media (max-width: 1024px) {
-  .carousel-title {
-    font-size: 2rem;
-  }
+.heading-sm {
+  font-size: 2vw;
+  padding: 10px;
 }
 
-.carousel-title {
-  /* display: block; */
-  font-size: 2rem;
-}
+/* @media (max-width: 767px) {
+  .carousel-title {
+    font-size: 1rem;
+  }
+  .heading-md {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+} */
+
 
 #recipe-carousel {
   height: 50%;
