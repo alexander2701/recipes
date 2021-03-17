@@ -12,7 +12,7 @@ hr {
   width: 8%;
 }
 
-ul{
+ul {
   list-style-type: none;
   padding: 10px;
   margin: 0;
@@ -31,14 +31,17 @@ a {
   color: #206a5d;
 }
 
-.icon-red{
+.icon-red {
   color: #bd2000;
 }
 
-.search-bar, .search-btn{
+.search-bar, .search-btn {
   box-shadow: -1px 1px 2px #888;
 }
 
+.card-column {
+  padding: 5%;
+}
 
 /* NAVBAR SECTION */
 .navbar-brand {
@@ -97,26 +100,8 @@ a {
   padding: 10px;
 }
 
-#recipe-carousel {
-  height: 50%;
-}
-
-.recipe-section{
+.recipe-section {
   text-align: left;
-}
-
-#carousel-section {
-  background-color: #d7fad7;
-  border: ridge white;
-  border-width: 15px;
-  /* color: white; */
-  /* margin: 5%; */
-  padding: 0;
-}
-
-.carousel-image {
-  height: auto;
-  width: 40%;
 }
 
 #search-addon {
