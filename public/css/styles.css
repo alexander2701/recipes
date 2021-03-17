@@ -19,16 +19,20 @@ ul{
 }
 
 li {
-  font-size: 1.5vw;
+  font-size: 1.7vw;
 }
 
 th, td {
   color: #206a5d;
-  font-size: 1.5vw;
+  font-size: 1.7vw;
 }
 
 a {
   color: #206a5d;
+}
+
+.icon-red{
+  color: #bd2000;
 }
 
 .search-bar, .search-btn{
@@ -92,17 +96,6 @@ a {
   font-size: 2vw;
   padding: 10px;
 }
-
-/* @media (max-width: 767px) {
-  .carousel-title {
-    font-size: 1rem;
-  }
-  .heading-md {
-    font-size: 1.5rem;
-    padding: 10px;
-  }
-} */
-
 
 #recipe-carousel {
   height: 50%;
