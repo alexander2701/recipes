@@ -3,7 +3,9 @@
 <section class='container-fluid'>
   <% if (typeof searchValue == 'undefined' || searchValue == ""){ %>
   <% header = "Alle recepten" %>
-  <% }else{ %>
+  <% } else if (searchResult == ""){ %>
+  <% header = "Geen recepten gevonden met " + searchValue %>
+  <% } else { %>
   <% header = "Recepten met " + searchValue %>
   <% } %>
   <h2 class='heading heading-md'><%= header %></h2>

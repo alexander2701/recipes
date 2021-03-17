@@ -12,6 +12,13 @@
   <tbody>
     <% searchResult.forEach(recipe => { %>
     <tr>
+      <td><i class="
+        <% if (recipe.favorite == true){ %>
+        fas fa-heart icon-red
+        <% }else{ %>
+        far fa-heart
+        <% } %>
+        "></i></td>
       <td><a href="/recipes/<%= recipe.name %>"><%= recipe.name %></a></td>
       <td><%= recipe.preparationTime %> minuten</td>
       <td><%= recipe.type %></td>

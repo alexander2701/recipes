@@ -59,13 +59,13 @@ app.get('/recipes', (req, res) => {
 });
 
 app.get("/recipes/:item", (req, res) => {
-  Recipe.find({
+  Recipe.findOne({
     name: req.params.item
   }, (err, recipes) => {
     if (err) {
       console.log(err);
     } else {
-      recipe = recipes[0];
+      recipe = recipes;
     }
     res.render('recipe', {
       recipe: recipe
@@ -76,7 +76,12 @@ app.get("/recipes/:item", (req, res) => {
 app.post('/', (req, res) => {
   let searchValue = req.body.search;
   let searchResult = [];
-  Recipe.find((err, recipes) => {
+  Recipe.find({
+    "ingredients": {
+      "$regex": searchValue,
+      "$options": "i"
+    }
+  }, (err, recipes) => {
     if (err) {
       console.log(err);
     } else {
