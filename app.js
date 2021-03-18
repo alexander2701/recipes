@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
+const _ = require("lodash");
 const mongoose = require('mongoose');
 const favicon = require('serve-favicon');
 const model = require(__dirname + '/model.js');
@@ -91,7 +92,7 @@ app.post('/', (req, res) => {
       recipes.forEach(recipe => searchResult.push(recipe));
     }
     res.render('recipes', {
-      searchValue: searchValue,
+      searchValue: _.lowerCase(searchValue),
       searchResult: searchResult
     });
   });
