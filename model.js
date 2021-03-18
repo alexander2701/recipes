@@ -1,7 +1,8 @@
+const mongoose = require('mongoose');
+const fs = require('fs');
 
-module.exports.getrecipeModel = function getModel() {
 
-  const mongoose = require('mongoose');
+exports.getRecipeModel = function getRecipeModel() {
 
   mongoose.connect('mongodb://localhost:27017/recipesDB', {
     useNewUrlParser: true,
@@ -21,8 +22,23 @@ module.exports.getrecipeModel = function getModel() {
     ingredients: {
       type: Array,
       "default": []
-    }
+    },
+    description: String
   });
 
   return mongoose.model('Recipe', recipeSchema);
+}
+
+
+exports.getDemoRecipes = function getDemoRecipes() {
+
+  return new Promise((resolve, reject) => {
+    fs.readFile('data/demo.json', 'utf8', (err, data) => {
+      if (err) {
+        reject(err)
+        return
+      }
+      resolve(JSON.parse(data))
+    })
+  })
 }

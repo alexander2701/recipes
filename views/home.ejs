@@ -29,36 +29,18 @@
 
 <section class="page-section container-fluid">
   <div class="row">
+    <% demoRecipes.forEach(recipe => { %>
     <div class="card-column col-lg-4 col-md-6">
-      <div class="card border-success">
-        <img src="/images/chili_met_kip_en_cashewnoten.jpg" class="recipe-image card-img-top" alt="...">
+      <a href="/recipes/<%= recipe.name %>" class="card border-success">
+        <img src="/images/<%= recipe.name.replace(/\s/g,'_') %>.jpg" class="recipe-image card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-outline-success">Go somewhere</a>
+          <h4 class="card-title"><%= recipe.name %></h4>
+            <h5 class="card-text"><%= recipe.type %></h5>
+            <p class="card-text">Bereidingstijd <%= recipe.preparationTime %>min</p>
         </div>
-      </div>
+      </a>
     </div>
-    <div class="card-column col-lg-4 col-md-6">
-      <div class="card border-success">
-        <img src="/images/chili_met_kip_en_cashewnoten.jpg" class="recipe-image card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-outline-success">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    <div class="card-column col-lg-4 col-md-6">
-      <div class="card border-success">
-        <img src="/images/chili_met_kip_en_cashewnoten.jpg" class="recipe-image card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-outline-success">Go somewhere</a>
-        </div>
-      </div>
-    </div>
+    <% }) %>
   </div>
 </section>
 

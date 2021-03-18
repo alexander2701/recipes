@@ -43,6 +43,14 @@ a {
   padding: 5%;
 }
 
+.card{
+  text-decoration: none !important;
+}
+
+.card:hover{
+  box-shadow: 0 0 10px #888;
+}
+
 /* NAVBAR SECTION */
 .navbar-brand {
   color: #206a5d;
@@ -81,13 +89,13 @@ a {
 }
 
 .heading-main {
-  font-size: 5vw;
+  font-size: 5.3vw;
 }
 
 .heading-curly {
-  color: #98ded9;
+  color: #98eed9;
   font-family: 'Dancing Script', cursive;
-  font-size: 4vw;
+  font-size: 4.3vw;
 }
 
 .heading-md {
