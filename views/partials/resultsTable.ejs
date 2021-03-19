@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table" id="resultsTable">
   <thead>
     <tr>
       <th scope="col"></th>
@@ -6,7 +6,6 @@
       <th scope="col">Bereidingstijd</th>
       <th scope="col">Soort recept</th>
       <th scope="col">Boek</th>
-      <th scope="col">Pagina</th>
     </tr>
   </thead>
   <tbody>
@@ -23,7 +22,6 @@
       <td><%= recipe.preparationTime %> minuten</td>
       <td><%= recipe.type %></td>
       <td><%= recipe.book %></td>
-      <td><%= recipe.page %></td>
     </tr>
     <% }) %>
   </tbody>
